@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['getcombo_90',['getCombo',['../classlibtris.html#a17daf747e18eb07c128cb732b8e3fd41',1,'libtris']]],
+  ['getframetime_91',['getFrameTime',['../classlibtris.html#a4d31c176f8924ada485b458181096f91',1,'libtris']]],
+  ['getframetime_5fus_92',['getFrameTime_us',['../classlibtris.html#a17ff98c776489c63a5cf219308d8f2e2',1,'libtris']]],
+  ['getgameoverreason_93',['getGameOverReason',['../classlibtris.html#a6dedc590d904f192ad7f7268539cd4c8',1,'libtris']]],
+  ['getghostblocks_94',['getGhostBlocks',['../classlibtris.html#a07815a5c59bfad74cef004184ea68e5e',1,'libtris']]],
+  ['getholdblock_95',['getHoldBlock',['../classlibtris.html#a694db955b51445377e35d3df5485ea0e',1,'libtris']]],
+  ['getholdlock_96',['getHoldLock',['../classlibtris.html#a72dbab9e90f3165d9d150507cbb4ffa8',1,'libtris']]],
+  ['getlevel_97',['getLevel',['../classlibtris.html#a763182347e360c1135d7af63ff2d67cd',1,'libtris']]],
+  ['getlinegoal_98',['getLineGoal',['../classlibtris.html#aa318f86b9013df2b31c076b35bbaf835',1,'libtris']]],
+  ['getlinescleared_99',['getLinesCleared',['../classlibtris.html#a3746281f9f329384ce0b245166c8fc2c',1,'libtris']]],
+  ['getlinesleft_100',['getLinesLeft',['../classlibtris.html#abf2953b0a94236d8f7d27eb67170d2b5',1,'libtris']]],
+  ['getmatrix_101',['getMatrix',['../classlibtris.html#a9f74df626ef56212b8ed514800a78d63',1,'libtris']]],
+  ['getmatrixheight_102',['getMatrixHeight',['../classlibtris.html#a057c040a404932d49814494fcf8c843f',1,'libtris']]],
+  ['getmatrixwidth_103',['getMatrixWidth',['../classlibtris.html#ad0e358e0a8c67cac21f285bf502794e2',1,'libtris']]],
+  ['getnextblocks_104',['getNextBlocks',['../classlibtris.html#a847ba3dc9323a2769f05c185c05863bd',1,'libtris']]],
+  ['getscore_105',['getScore',['../classlibtris.html#ae771138d8fd9d84c88c4b917058b051d',1,'libtris']]],
+  ['gettetriminocolours_106',['getTetriminoColours',['../classlibtris.html#aefd30b54af918e1209f52ff6e85260b1',1,'libtris']]],
+  ['getvisiblematrixheight_107',['getVisibleMatrixHeight',['../classlibtris.html#a96a53e555586b1d23c29c23f093d1c94',1,'libtris']]]
+];

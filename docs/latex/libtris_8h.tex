@@ -1,0 +1,305 @@
+\hypertarget{libtris_8h}{}\doxysection{src/libtris.h File Reference}
+\label{libtris_8h}\index{src/libtris.h@{src/libtris.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$inttypes.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structblock__info}{block\+\_\+info$<$ colour\+\_\+t $>$}}
+\item 
+class \mbox{\hyperlink{classlibtris}{libtris$<$ colour\+\_\+t $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}{Rotation\+Status}} \mbox{\hyperlink{libtris_8h_a93c32b4eaa1e39dfd5d54bc89bd554e0}{Rotation\+Status}}
+\item 
+typedef enum \mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3}{Block\+Type}} \mbox{\hyperlink{libtris_8h_a20b514914543d2095d919e169421665d}{Block\+Type}}
+\item 
+typedef enum \mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253}{Game\+Over\+Reason}} \mbox{\hyperlink{libtris_8h_a7724b2b7e6cd71fc9b6bd384072d8738}{Game\+Over\+Reason}}
+\item 
+typedef enum \mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}{Lock\+Down\+Type}} \mbox{\hyperlink{libtris_8h_a940263e9b3a3397c907a8e6b2a2e7c02}{Lock\+Down\+Type}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}{Rotation\+Status}} \{ \newline
+\mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba79d8200c5438b30a3baaf4d1f12c2270}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+A\+WN}}, 
+\mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba42dc626ea15553434c5543fdbc351d0f}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+R\+I\+G\+HT}}, 
+\mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba123cfa7bb76ac2fbfdf585671c416b5c}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+L\+E\+FT}}, 
+\mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4bacbc1c12972a4481ee83f80923bffd718}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+2}}, 
+\newline
+\mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba2eefc244dc8dd807f5aa2fa4cafd1b5b}{R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+E\+XT}}
+ \}
+\item 
+enum \mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3}{Block\+Type}} \{ \mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3ab311dc3258905386b6bf67d11a8acde8}{B\+L\+O\+C\+K\+\_\+\+E\+M\+P\+TY}}, 
+\mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3a924ddfa9af07e7f2f36c5c64c6d23f11}{B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+IC}}, 
+\mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3ac8e22dd8ac9dc441a50c007abb341c33}{B\+L\+O\+C\+K\+\_\+\+C\+U\+R\+R\+E\+NT}}, 
+\mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3a05b410e0ca2b6680af2f1b143e44a56d}{B\+L\+O\+C\+K\+\_\+\+G\+H\+O\+ST}}
+ \}
+\item 
+enum \mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253}{Game\+Over\+Reason}} \{ \newline
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253a1d389afe330fc59b0c45c3d61180fa2f}{G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+N\+O\+NE}}, 
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253af336e0337368788b148ea4fd6e77352f}{G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+B\+L\+O\+C\+K\+\_\+\+O\+UT}}, 
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253ac8977e167b065e6ea04fccb507d7349e}{G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+L\+O\+C\+K\+\_\+\+O\+UT}}, 
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253a4d6c333df197e4e40b9605d091165e4f}{G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+P\+A\+R\+T\+I\+A\+L\+\_\+\+L\+O\+C\+K\+\_\+\+O\+UT}}, 
+\newline
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253a8672cba4bd59b297133b2be8ce4bb81d}{G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+G\+A\+R\+B\+A\+G\+E\+\_\+\+O\+UT}}, 
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253a28458b431b8a72e8ba8faa4734628064}{G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+T\+O\+P\+\_\+\+O\+UT}}
+ \}
+\item 
+enum \mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}{Lock\+Down\+Type}} \{ \mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a4f528fa8da5b66e64d402c07aee703a0}{L\+O\+C\+K\+\_\+\+D\+O\+W\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+A\+S\+S\+IC}}, 
+\mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a3af283031ee100f2af3eeb912801536a}{L\+O\+C\+K\+\_\+\+D\+O\+W\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+X\+T\+E\+N\+D\+ED}}, 
+\mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a4114cfdab468515af73d4367da85fa99}{L\+O\+C\+K\+\_\+\+D\+O\+W\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{libtris_8h_a9b58b6c15727a9da64ee9d64aec44d88}{standard\+\_\+tetriminoes}} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}\mbox{[}4\mbox{]}
+\item 
+int8\+\_\+t \mbox{\hyperlink{libtris_8h_a5a1d77e365e8d31b23e2824590b08b89}{rotation\+\_\+table}} \mbox{[}5\mbox{]}\mbox{[}5\mbox{]}\mbox{[}2\mbox{]}
+\item 
+int8\+\_\+t \mbox{\hyperlink{libtris_8h_a5454f24948f0e682a4568adfbf9da3a1}{srs\+\_\+wall\+\_\+kick\+\_\+positions}} \mbox{[}2\mbox{]}\mbox{[}8\mbox{]}\mbox{[}5\mbox{]}\mbox{[}2\mbox{]}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{libtris_8h_ae82b05322f7a299d6cc91c752a55abde}{srs\+\_\+rotation\+\_\+wall\+\_\+kick\+\_\+map}} \mbox{[}2\mbox{]}\mbox{[}4\mbox{]}
+\item 
+\mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}{Rotation\+Status}} \mbox{\hyperlink{libtris_8h_aab668dacb2326ed1de0f4dab2264ab95}{srs\+\_\+rotation\+\_\+states}} \mbox{[}2\mbox{]}\mbox{[}4\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{libtris_8h_a20b514914543d2095d919e169421665d}\label{libtris_8h_a20b514914543d2095d919e169421665d}} 
+\index{libtris.h@{libtris.h}!BlockType@{BlockType}}
+\index{BlockType@{BlockType}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{BlockType}{BlockType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3}{Block\+Type}} \mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3}{Block\+Type}}}
+
+\mbox{\Hypertarget{libtris_8h_a7724b2b7e6cd71fc9b6bd384072d8738}\label{libtris_8h_a7724b2b7e6cd71fc9b6bd384072d8738}} 
+\index{libtris.h@{libtris.h}!GameOverReason@{GameOverReason}}
+\index{GameOverReason@{GameOverReason}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{GameOverReason}{GameOverReason}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253}{Game\+Over\+Reason}} \mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253}{Game\+Over\+Reason}}}
+
+\mbox{\Hypertarget{libtris_8h_a940263e9b3a3397c907a8e6b2a2e7c02}\label{libtris_8h_a940263e9b3a3397c907a8e6b2a2e7c02}} 
+\index{libtris.h@{libtris.h}!LockDownType@{LockDownType}}
+\index{LockDownType@{LockDownType}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{LockDownType}{LockDownType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}{Lock\+Down\+Type}} \mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}{Lock\+Down\+Type}}}
+
+\mbox{\Hypertarget{libtris_8h_a93c32b4eaa1e39dfd5d54bc89bd554e0}\label{libtris_8h_a93c32b4eaa1e39dfd5d54bc89bd554e0}} 
+\index{libtris.h@{libtris.h}!RotationStatus@{RotationStatus}}
+\index{RotationStatus@{RotationStatus}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{RotationStatus}{RotationStatus}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}{Rotation\+Status}} \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}{Rotation\+Status}}}
+
+Rotation Status Describes the rotation of the current tetrimino. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{libtris_8h_a54420623f26ab6bb61042b41cccf37a3}\label{libtris_8h_a54420623f26ab6bb61042b41cccf37a3}} 
+\index{libtris.h@{libtris.h}!BlockType@{BlockType}}
+\index{BlockType@{BlockType}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{BlockType}{BlockType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{libtris_8h_a54420623f26ab6bb61042b41cccf37a3}{Block\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCK\_EMPTY@{BLOCK\_EMPTY}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!BLOCK\_EMPTY@{BLOCK\_EMPTY}}}\mbox{\Hypertarget{libtris_8h_a54420623f26ab6bb61042b41cccf37a3ab311dc3258905386b6bf67d11a8acde8}\label{libtris_8h_a54420623f26ab6bb61042b41cccf37a3ab311dc3258905386b6bf67d11a8acde8}} 
+B\+L\+O\+C\+K\+\_\+\+E\+M\+P\+TY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCK\_STATIC@{BLOCK\_STATIC}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!BLOCK\_STATIC@{BLOCK\_STATIC}}}\mbox{\Hypertarget{libtris_8h_a54420623f26ab6bb61042b41cccf37a3a924ddfa9af07e7f2f36c5c64c6d23f11}\label{libtris_8h_a54420623f26ab6bb61042b41cccf37a3a924ddfa9af07e7f2f36c5c64c6d23f11}} 
+B\+L\+O\+C\+K\+\_\+\+S\+T\+A\+T\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCK\_CURRENT@{BLOCK\_CURRENT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!BLOCK\_CURRENT@{BLOCK\_CURRENT}}}\mbox{\Hypertarget{libtris_8h_a54420623f26ab6bb61042b41cccf37a3ac8e22dd8ac9dc441a50c007abb341c33}\label{libtris_8h_a54420623f26ab6bb61042b41cccf37a3ac8e22dd8ac9dc441a50c007abb341c33}} 
+B\+L\+O\+C\+K\+\_\+\+C\+U\+R\+R\+E\+NT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BLOCK\_GHOST@{BLOCK\_GHOST}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!BLOCK\_GHOST@{BLOCK\_GHOST}}}\mbox{\Hypertarget{libtris_8h_a54420623f26ab6bb61042b41cccf37a3a05b410e0ca2b6680af2f1b143e44a56d}\label{libtris_8h_a54420623f26ab6bb61042b41cccf37a3a05b410e0ca2b6680af2f1b143e44a56d}} 
+B\+L\+O\+C\+K\+\_\+\+G\+H\+O\+ST&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 27 of file libtris.\+h.
+
+\mbox{\Hypertarget{libtris_8h_a3ad591d38e264d36ee259237af3ff253}\label{libtris_8h_a3ad591d38e264d36ee259237af3ff253}} 
+\index{libtris.h@{libtris.h}!GameOverReason@{GameOverReason}}
+\index{GameOverReason@{GameOverReason}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{GameOverReason}{GameOverReason}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253}{Game\+Over\+Reason}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER\_REASON\_NONE@{GAME\_OVER\_REASON\_NONE}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!GAME\_OVER\_REASON\_NONE@{GAME\_OVER\_REASON\_NONE}}}\mbox{\Hypertarget{libtris_8h_a3ad591d38e264d36ee259237af3ff253a1d389afe330fc59b0c45c3d61180fa2f}\label{libtris_8h_a3ad591d38e264d36ee259237af3ff253a1d389afe330fc59b0c45c3d61180fa2f}} 
+G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+N\+O\+NE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER\_REASON\_BLOCK\_OUT@{GAME\_OVER\_REASON\_BLOCK\_OUT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!GAME\_OVER\_REASON\_BLOCK\_OUT@{GAME\_OVER\_REASON\_BLOCK\_OUT}}}\mbox{\Hypertarget{libtris_8h_a3ad591d38e264d36ee259237af3ff253af336e0337368788b148ea4fd6e77352f}\label{libtris_8h_a3ad591d38e264d36ee259237af3ff253af336e0337368788b148ea4fd6e77352f}} 
+G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+B\+L\+O\+C\+K\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER\_REASON\_LOCK\_OUT@{GAME\_OVER\_REASON\_LOCK\_OUT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!GAME\_OVER\_REASON\_LOCK\_OUT@{GAME\_OVER\_REASON\_LOCK\_OUT}}}\mbox{\Hypertarget{libtris_8h_a3ad591d38e264d36ee259237af3ff253ac8977e167b065e6ea04fccb507d7349e}\label{libtris_8h_a3ad591d38e264d36ee259237af3ff253ac8977e167b065e6ea04fccb507d7349e}} 
+G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+L\+O\+C\+K\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER\_REASON\_PARTIAL\_LOCK\_OUT@{GAME\_OVER\_REASON\_PARTIAL\_LOCK\_OUT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!GAME\_OVER\_REASON\_PARTIAL\_LOCK\_OUT@{GAME\_OVER\_REASON\_PARTIAL\_LOCK\_OUT}}}\mbox{\Hypertarget{libtris_8h_a3ad591d38e264d36ee259237af3ff253a4d6c333df197e4e40b9605d091165e4f}\label{libtris_8h_a3ad591d38e264d36ee259237af3ff253a4d6c333df197e4e40b9605d091165e4f}} 
+G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+P\+A\+R\+T\+I\+A\+L\+\_\+\+L\+O\+C\+K\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER\_REASON\_GARBAGE\_OUT@{GAME\_OVER\_REASON\_GARBAGE\_OUT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!GAME\_OVER\_REASON\_GARBAGE\_OUT@{GAME\_OVER\_REASON\_GARBAGE\_OUT}}}\mbox{\Hypertarget{libtris_8h_a3ad591d38e264d36ee259237af3ff253a8672cba4bd59b297133b2be8ce4bb81d}\label{libtris_8h_a3ad591d38e264d36ee259237af3ff253a8672cba4bd59b297133b2be8ce4bb81d}} 
+G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+G\+A\+R\+B\+A\+G\+E\+\_\+\+O\+UT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER\_REASON\_TOP\_OUT@{GAME\_OVER\_REASON\_TOP\_OUT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!GAME\_OVER\_REASON\_TOP\_OUT@{GAME\_OVER\_REASON\_TOP\_OUT}}}\mbox{\Hypertarget{libtris_8h_a3ad591d38e264d36ee259237af3ff253a28458b431b8a72e8ba8faa4734628064}\label{libtris_8h_a3ad591d38e264d36ee259237af3ff253a28458b431b8a72e8ba8faa4734628064}} 
+G\+A\+M\+E\+\_\+\+O\+V\+E\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+T\+O\+P\+\_\+\+O\+UT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file libtris.\+h.
+
+\mbox{\Hypertarget{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}\label{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}} 
+\index{libtris.h@{libtris.h}!LockDownType@{LockDownType}}
+\index{LockDownType@{LockDownType}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{LockDownType}{LockDownType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}{Lock\+Down\+Type}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOCK\_DOWN\_TYPE\_CLASSIC@{LOCK\_DOWN\_TYPE\_CLASSIC}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!LOCK\_DOWN\_TYPE\_CLASSIC@{LOCK\_DOWN\_TYPE\_CLASSIC}}}\mbox{\Hypertarget{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a4f528fa8da5b66e64d402c07aee703a0}\label{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a4f528fa8da5b66e64d402c07aee703a0}} 
+L\+O\+C\+K\+\_\+\+D\+O\+W\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+L\+A\+S\+S\+IC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOCK\_DOWN\_TYPE\_EXTENDED@{LOCK\_DOWN\_TYPE\_EXTENDED}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!LOCK\_DOWN\_TYPE\_EXTENDED@{LOCK\_DOWN\_TYPE\_EXTENDED}}}\mbox{\Hypertarget{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a3af283031ee100f2af3eeb912801536a}\label{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a3af283031ee100f2af3eeb912801536a}} 
+L\+O\+C\+K\+\_\+\+D\+O\+W\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+X\+T\+E\+N\+D\+ED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LOCK\_DOWN\_TYPE\_INFINITE@{LOCK\_DOWN\_TYPE\_INFINITE}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!LOCK\_DOWN\_TYPE\_INFINITE@{LOCK\_DOWN\_TYPE\_INFINITE}}}\mbox{\Hypertarget{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a4114cfdab468515af73d4367da85fa99}\label{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0a4114cfdab468515af73d4367da85fa99}} 
+L\+O\+C\+K\+\_\+\+D\+O\+W\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+F\+I\+N\+I\+TE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 43 of file libtris.\+h.
+
+\mbox{\Hypertarget{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}\label{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}} 
+\index{libtris.h@{libtris.h}!RotationStatus@{RotationStatus}}
+\index{RotationStatus@{RotationStatus}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{RotationStatus}{RotationStatus}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}{Rotation\+Status}}}
+
+Rotation Status Describes the rotation of the current tetrimino. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROTATION\_SPAWN@{ROTATION\_SPAWN}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!ROTATION\_SPAWN@{ROTATION\_SPAWN}}}\mbox{\Hypertarget{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba79d8200c5438b30a3baaf4d1f12c2270}\label{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba79d8200c5438b30a3baaf4d1f12c2270}} 
+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+S\+P\+A\+WN&not rotated, or rotated back to the starting rotation \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROTATION\_RIGHT@{ROTATION\_RIGHT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!ROTATION\_RIGHT@{ROTATION\_RIGHT}}}\mbox{\Hypertarget{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba42dc626ea15553434c5543fdbc351d0f}\label{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba42dc626ea15553434c5543fdbc351d0f}} 
+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+R\+I\+G\+HT&rotated 90 degrees right (clockwise) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROTATION\_LEFT@{ROTATION\_LEFT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!ROTATION\_LEFT@{ROTATION\_LEFT}}}\mbox{\Hypertarget{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba123cfa7bb76ac2fbfdf585671c416b5c}\label{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba123cfa7bb76ac2fbfdf585671c416b5c}} 
+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+L\+E\+FT&rotated 90 degrees left (anticlockwise) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROTATION\_2@{ROTATION\_2}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!ROTATION\_2@{ROTATION\_2}}}\mbox{\Hypertarget{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4bacbc1c12972a4481ee83f80923bffd718}\label{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4bacbc1c12972a4481ee83f80923bffd718}} 
+R\+O\+T\+A\+T\+I\+O\+N\+\_\+2&rotated 180 degrees from the starting rotation (in any direction) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROTATION\_BOTTOM\_TEXT@{ROTATION\_BOTTOM\_TEXT}!libtris.h@{libtris.h}}\index{libtris.h@{libtris.h}!ROTATION\_BOTTOM\_TEXT@{ROTATION\_BOTTOM\_TEXT}}}\mbox{\Hypertarget{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba2eefc244dc8dd807f5aa2fa4cafd1b5b}\label{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba2eefc244dc8dd807f5aa2fa4cafd1b5b}} 
+R\+O\+T\+A\+T\+I\+O\+N\+\_\+\+B\+O\+T\+T\+O\+M\+\_\+\+T\+E\+XT&unused rotation that i made when i couldn\textquotesingle{}t get this working \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 19 of file libtris.\+h.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{libtris_8h_a5a1d77e365e8d31b23e2824590b08b89}\label{libtris_8h_a5a1d77e365e8d31b23e2824590b08b89}} 
+\index{libtris.h@{libtris.h}!rotation\_table@{rotation\_table}}
+\index{rotation\_table@{rotation\_table}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{rotation\_table}{rotation\_table}}
+{\footnotesize\ttfamily int8\+\_\+t rotation\+\_\+table\mbox{[}5\mbox{]}\mbox{[}5\mbox{]}\mbox{[}2\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{ \{4, 0\},   \{3, 1\},   \{2, 2\},   \{1, 3\},   \{0, 4\}   \},}
+\DoxyCodeLine{    \{ \{3, -\/1\},  \{2, 0\},   \{1, 1\},   \{0, 2\},   \{-\/1, 3\}  \},}
+\DoxyCodeLine{    \{ \{2, -\/2\},  \{1, -\/1\},  \{0, 0\},   \{-\/1, 1\},  \{-\/2, 2\}  \},}
+\DoxyCodeLine{    \{ \{1, -\/3\},  \{0, -\/2\},  \{-\/1, -\/1\}, \{-\/2, 0\},  \{-\/3, 1\}  \},}
+\DoxyCodeLine{    \{ \{0, -\/4\},  \{-\/1, -\/3\}, \{-\/2, -\/2\}, \{-\/3, -\/1\}, \{-\/4, 0\}  \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 92 of file libtris.\+h.
+
+\mbox{\Hypertarget{libtris_8h_aab668dacb2326ed1de0f4dab2264ab95}\label{libtris_8h_aab668dacb2326ed1de0f4dab2264ab95}} 
+\index{libtris.h@{libtris.h}!srs\_rotation\_states@{srs\_rotation\_states}}
+\index{srs\_rotation\_states@{srs\_rotation\_states}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{srs\_rotation\_states}{srs\_rotation\_states}}
+{\footnotesize\ttfamily \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4b}{Rotation\+Status}} srs\+\_\+rotation\+\_\+states\mbox{[}2\mbox{]}\mbox{[}4\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{ \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba42dc626ea15553434c5543fdbc351d0f}{ROTATION\_RIGHT}}, \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4bacbc1c12972a4481ee83f80923bffd718}{ROTATION\_2}}, \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba79d8200c5438b30a3baaf4d1f12c2270}{ROTATION\_SPAWN}}, \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba123cfa7bb76ac2fbfdf585671c416b5c}{ROTATION\_LEFT}} \},}
+\DoxyCodeLine{    \{ \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba123cfa7bb76ac2fbfdf585671c416b5c}{ROTATION\_LEFT}}, \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba79d8200c5438b30a3baaf4d1f12c2270}{ROTATION\_SPAWN}}, \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4bacbc1c12972a4481ee83f80923bffd718}{ROTATION\_2}}, \mbox{\hyperlink{libtris_8h_aa8ed1cf0364d6340a8a5410753211d4ba42dc626ea15553434c5543fdbc351d0f}{ROTATION\_RIGHT}} \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 151 of file libtris.\+h.
+
+\mbox{\Hypertarget{libtris_8h_ae82b05322f7a299d6cc91c752a55abde}\label{libtris_8h_ae82b05322f7a299d6cc91c752a55abde}} 
+\index{libtris.h@{libtris.h}!srs\_rotation\_wall\_kick\_map@{srs\_rotation\_wall\_kick\_map}}
+\index{srs\_rotation\_wall\_kick\_map@{srs\_rotation\_wall\_kick\_map}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{srs\_rotation\_wall\_kick\_map}{srs\_rotation\_wall\_kick\_map}}
+{\footnotesize\ttfamily uint8\+\_\+t srs\+\_\+rotation\+\_\+wall\+\_\+kick\+\_\+map\mbox{[}2\mbox{]}\mbox{[}4\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    }
+\DoxyCodeLine{    }
+\DoxyCodeLine{     \{0, 2, 6, 4\},}
+\DoxyCodeLine{     \{7, 1, 5, 3\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line 144 of file libtris.\+h.
+
+\mbox{\Hypertarget{libtris_8h_a5454f24948f0e682a4568adfbf9da3a1}\label{libtris_8h_a5454f24948f0e682a4568adfbf9da3a1}} 
+\index{libtris.h@{libtris.h}!srs\_wall\_kick\_positions@{srs\_wall\_kick\_positions}}
+\index{srs\_wall\_kick\_positions@{srs\_wall\_kick\_positions}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{srs\_wall\_kick\_positions}{srs\_wall\_kick\_positions}}
+{\footnotesize\ttfamily int8\+\_\+t srs\+\_\+wall\+\_\+kick\+\_\+positions\mbox{[}2\mbox{]}\mbox{[}8\mbox{]}\mbox{[}5\mbox{]}\mbox{[}2\mbox{]}}
+
+
+
+Definition at line 100 of file libtris.\+h.
+
+\mbox{\Hypertarget{libtris_8h_a9b58b6c15727a9da64ee9d64aec44d88}\label{libtris_8h_a9b58b6c15727a9da64ee9d64aec44d88}} 
+\index{libtris.h@{libtris.h}!standard\_tetriminoes@{standard\_tetriminoes}}
+\index{standard\_tetriminoes@{standard\_tetriminoes}!libtris.h@{libtris.h}}
+\doxysubsubsection{\texorpdfstring{standard\_tetriminoes}{standard\_tetriminoes}}
+{\footnotesize\ttfamily bool standard\+\_\+tetriminoes\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}\mbox{[}4\mbox{]}}
+
+
+
+Definition at line 59 of file libtris.\+h.
+

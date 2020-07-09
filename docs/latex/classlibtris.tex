@@ -1,0 +1,647 @@
+\hypertarget{classlibtris}{}\doxysection{libtris$<$ colour\+\_\+t $>$ Class Template Reference}
+\label{classlibtris}\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+
+
+{\ttfamily \#include $<$libtris.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlibtris_a808fa229d9906402c7c8b50857c66aca}{libtris}} (uint16\+\_\+t matrix\+\_\+width, uint16\+\_\+t matrix\+\_\+height, uint16\+\_\+t buffer\+\_\+size, uint16\+\_\+t spawn\+\_\+row, colour\+\_\+t $\ast$tetrimino\+\_\+colours)
+\item 
+\mbox{\hyperlink{classlibtris_a5922744ce19e6624258ad88b3a86fc35}{$\sim$libtris}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_ad0e358e0a8c67cac21f285bf502794e2}{get\+Matrix\+Width}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_a057c040a404932d49814494fcf8c843f}{get\+Matrix\+Height}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_a96a53e555586b1d23c29c23f093d1c94}{get\+Visible\+Matrix\+Height}} ()
+\item 
+colour\+\_\+t $\ast$ \mbox{\hyperlink{classlibtris_aefd30b54af918e1209f52ff6e85260b1}{get\+Tetrimino\+Colours}} ()
+\item 
+\mbox{\hyperlink{structblock__info}{block\+\_\+info}}$<$ colour\+\_\+t $>$ $\ast$$\ast$ \mbox{\hyperlink{classlibtris_a9f74df626ef56212b8ed514800a78d63}{get\+Matrix}} ()
+\item 
+uint16\+\_\+t $\ast$$\ast$ \mbox{\hyperlink{classlibtris_ade2af85decb25cfc43644b21689ae663}{get\+Ghost\+Blocks}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_aab3d99590fdece1397592dcf819c7b2f}{reset\+Ghost\+Blocks}} ()
+\item 
+\mbox{\hyperlink{structblock__info}{block\+\_\+info}}$<$ colour\+\_\+t $>$ $\ast$$\ast$ \mbox{\hyperlink{classlibtris_a847ba3dc9323a2769f05c185c05863bd}{get\+Next\+Blocks}} (uint8\+\_\+t next\+\_\+blocks)
+\item 
+void \mbox{\hyperlink{classlibtris_a16f737ecf8c76a70c5e2a259de61b9c2}{hold}} ()
+\item 
+\mbox{\hyperlink{structblock__info}{block\+\_\+info}}$<$ colour\+\_\+t $>$ $\ast$ \mbox{\hyperlink{classlibtris_a694db955b51445377e35d3df5485ea0e}{get\+Hold\+Block}} ()
+\item 
+bool \mbox{\hyperlink{classlibtris_a72dbab9e90f3165d9d150507cbb4ffa8}{get\+Hold\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_ae544d3172784fadfd806f1aee1ff6839}{clear\+Lines}} ()
+\item 
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253}{Game\+Over\+Reason}} \mbox{\hyperlink{classlibtris_a6dedc590d904f192ad7f7268539cd4c8}{get\+Game\+Over\+Reason}} ()
+\item 
+bool \mbox{\hyperlink{classlibtris_addd03e40cde45f7a5018fb43ae4d29b3}{is\+Game\+Active}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classlibtris_a4d31c176f8924ada485b458181096f91}{get\+Frame\+Time}} ()
+\item 
+uint64\+\_\+t \mbox{\hyperlink{classlibtris_a17ff98c776489c63a5cf219308d8f2e2}{get\+Frame\+Time\+\_\+us}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_a5f7c9756ceeaafe09876663f69227303}{start\+Game}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_a86b3988c7b801c67c8478ae729e45433}{update}} (uint64\+\_\+t dt)
+\item 
+void \mbox{\hyperlink{classlibtris_a0a389c0ae95ee39f4aa7a66b79d7b841}{set\+D\+AS}} (uint16\+\_\+t das)
+\item 
+void \mbox{\hyperlink{classlibtris_a0edebbbf2f0cf3b78a74287c130cd8c9}{set\+A\+RR}} (uint16\+\_\+t arr)
+\item 
+void \mbox{\hyperlink{classlibtris_a22ebbc01b2333871d0d1a3abeb75b23f}{set\+A\+RE}} (uint16\+\_\+t are)
+\item 
+void \mbox{\hyperlink{classlibtris_aeecfa440995e37c87140242d13fbffb7}{enable\+Ghost}} (bool ghost)
+\item 
+void \mbox{\hyperlink{classlibtris_a5f3ca144e232c04cea49869af7ff485d}{enable\+Wall\+Kick}} (bool wall\+\_\+kick)
+\item 
+void \mbox{\hyperlink{classlibtris_a4599d8089efe9207b6c0d3eba4abfd95}{set\+Lock\+Down\+Type}} (\mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}{Lock\+Down\+Type}} lock\+\_\+down\+\_\+type)
+\item 
+void \mbox{\hyperlink{classlibtris_a588d5e06c7ff17e5cc60baa7b4cc5172}{set\+Constant\+Gravity}} (bool constant\+\_\+gravity)
+\item 
+void \mbox{\hyperlink{classlibtris_a3f51b0122a75e203bdd1998ed5ddb634}{enable\+Block\+Out}} (bool block\+\_\+out)
+\item 
+void \mbox{\hyperlink{classlibtris_ad254f1ac0e1dcbd7ffa267759e15e880}{enable\+Lock\+Out}} (bool lock\+\_\+out)
+\item 
+void \mbox{\hyperlink{classlibtris_aa545ae7b9476d02fd07664d0790befb7}{enable\+Partial\+Lock\+Out}} (bool partial\+\_\+lock\+\_\+out)
+\item 
+void \mbox{\hyperlink{classlibtris_a9bdc49b0ab4d150790e6ec9ced1fa36a}{set\+Moving\+Left}} (bool moving)
+\item 
+void \mbox{\hyperlink{classlibtris_af12ac28a153079bede76eeffa8f990f2}{set\+Moving\+Right}} (bool moving)
+\item 
+void \mbox{\hyperlink{classlibtris_a07349f8ec707a15e7c9df6aaf27c600b}{set\+Moving\+Down}} (bool moving)
+\item 
+void \mbox{\hyperlink{classlibtris_a4b2df761136c808130b21a61479e38a6}{move\+Left}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_a9290a59ad0e0463977435b8e5312e8e6}{move\+Right}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_a4e4be1938b0bd00b608196498540347c}{move\+Down}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_a308176ebfc32457ffd6099e4ea0b2341}{hard\+Drop}} (bool lock=true)
+\item 
+void \mbox{\hyperlink{classlibtris_ad1fa8602cf69a416100086697044e819}{rotate\+Clockwise}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_afa4eeb72972607066773e9f973241be1}{rotate\+Anticlockwise}} ()
+\item 
+void \mbox{\hyperlink{classlibtris_a86fa1ba9750d2b47d33c1fac977bbaea}{set\+Level}} (uint16\+\_\+t level)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classlibtris_ae771138d8fd9d84c88c4b917058b051d}{get\+Score}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_a763182347e360c1135d7af63ff2d67cd}{get\+Level}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_aa318f86b9013df2b31c076b35bbaf835}{get\+Line\+Goal}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_abf2953b0a94236d8f7d27eb67170d2b5}{get\+Lines\+Left}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_a3746281f9f329384ce0b245166c8fc2c}{get\+Lines\+Cleared}} ()
+\item 
+uint16\+\_\+t \mbox{\hyperlink{classlibtris_a17daf747e18eb07c128cb732b8e3fd41}{get\+Combo}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classlibtris_a86bdb865c4c82560a6d0b7ecb27fb2ab}{lock\+\_\+down\+\_\+moves}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class colour\+\_\+t$>$\newline
+class libtris$<$ colour\+\_\+t $>$}
+
+
+
+Definition at line 157 of file libtris.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlibtris_a808fa229d9906402c7c8b50857c66aca}\label{classlibtris_a808fa229d9906402c7c8b50857c66aca}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!libtris@{libtris}}
+\index{libtris@{libtris}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{libtris()}{libtris()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+\mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::\mbox{\hyperlink{classlibtris}{libtris}} (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{matrix\+\_\+width,  }\item[{uint16\+\_\+t}]{matrix\+\_\+height,  }\item[{uint16\+\_\+t}]{buffer\+\_\+size,  }\item[{uint16\+\_\+t}]{spawn\+\_\+row,  }\item[{colour\+\_\+t $\ast$}]{tetrimino\+\_\+colours }\end{DoxyParamCaption})}
+
+
+
+Definition at line 276 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a5922744ce19e6624258ad88b3a86fc35}\label{classlibtris_a5922744ce19e6624258ad88b3a86fc35}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!````~libtris@{$\sim$libtris}}
+\index{````~libtris@{$\sim$libtris}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$libtris()}{~libtris()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+\mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::$\sim$\mbox{\hyperlink{classlibtris}{libtris}}}
+
+
+
+Definition at line 314 of file libtris.\+h.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classlibtris_ae544d3172784fadfd806f1aee1ff6839}\label{classlibtris_ae544d3172784fadfd806f1aee1ff6839}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!clearLines@{clearLines}}
+\index{clearLines@{clearLines}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{clearLines()}{clearLines()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::clear\+Lines}
+
+
+
+Definition at line 664 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a3f51b0122a75e203bdd1998ed5ddb634}\label{classlibtris_a3f51b0122a75e203bdd1998ed5ddb634}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!enableBlockOut@{enableBlockOut}}
+\index{enableBlockOut@{enableBlockOut}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{enableBlockOut()}{enableBlockOut()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::enable\+Block\+Out (\begin{DoxyParamCaption}\item[{bool}]{block\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 938 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_aeecfa440995e37c87140242d13fbffb7}\label{classlibtris_aeecfa440995e37c87140242d13fbffb7}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!enableGhost@{enableGhost}}
+\index{enableGhost@{enableGhost}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{enableGhost()}{enableGhost()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::enable\+Ghost (\begin{DoxyParamCaption}\item[{bool}]{ghost }\end{DoxyParamCaption})}
+
+
+
+Definition at line 914 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_ad254f1ac0e1dcbd7ffa267759e15e880}\label{classlibtris_ad254f1ac0e1dcbd7ffa267759e15e880}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!enableLockOut@{enableLockOut}}
+\index{enableLockOut@{enableLockOut}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{enableLockOut()}{enableLockOut()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::enable\+Lock\+Out (\begin{DoxyParamCaption}\item[{bool}]{lock\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 944 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_aa545ae7b9476d02fd07664d0790befb7}\label{classlibtris_aa545ae7b9476d02fd07664d0790befb7}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!enablePartialLockOut@{enablePartialLockOut}}
+\index{enablePartialLockOut@{enablePartialLockOut}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{enablePartialLockOut()}{enablePartialLockOut()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::enable\+Partial\+Lock\+Out (\begin{DoxyParamCaption}\item[{bool}]{partial\+\_\+lock\+\_\+out }\end{DoxyParamCaption})}
+
+
+
+Definition at line 950 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a5f3ca144e232c04cea49869af7ff485d}\label{classlibtris_a5f3ca144e232c04cea49869af7ff485d}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!enableWallKick@{enableWallKick}}
+\index{enableWallKick@{enableWallKick}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{enableWallKick()}{enableWallKick()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::enable\+Wall\+Kick (\begin{DoxyParamCaption}\item[{bool}]{wall\+\_\+kick }\end{DoxyParamCaption})}
+
+
+
+Definition at line 920 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a17daf747e18eb07c128cb732b8e3fd41}\label{classlibtris_a17daf747e18eb07c128cb732b8e3fd41}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getCombo@{getCombo}}
+\index{getCombo@{getCombo}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getCombo()}{getCombo()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Combo}
+
+
+
+Definition at line 1442 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a4d31c176f8924ada485b458181096f91}\label{classlibtris_a4d31c176f8924ada485b458181096f91}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getFrameTime@{getFrameTime}}
+\index{getFrameTime@{getFrameTime}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getFrameTime()}{getFrameTime()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Frame\+Time}
+
+
+
+Definition at line 746 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a17ff98c776489c63a5cf219308d8f2e2}\label{classlibtris_a17ff98c776489c63a5cf219308d8f2e2}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getFrameTime\_us@{getFrameTime\_us}}
+\index{getFrameTime\_us@{getFrameTime\_us}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getFrameTime\_us()}{getFrameTime\_us()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint64\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Frame\+Time\+\_\+us}
+
+
+
+Definition at line 754 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a6dedc590d904f192ad7f7268539cd4c8}\label{classlibtris_a6dedc590d904f192ad7f7268539cd4c8}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getGameOverReason@{getGameOverReason}}
+\index{getGameOverReason@{getGameOverReason}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getGameOverReason()}{getGameOverReason()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+\mbox{\hyperlink{libtris_8h_a3ad591d38e264d36ee259237af3ff253}{Game\+Over\+Reason}} \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Game\+Over\+Reason}
+
+
+
+Definition at line 734 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_ade2af85decb25cfc43644b21689ae663}\label{classlibtris_ade2af85decb25cfc43644b21689ae663}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getGhostBlocks@{getGhostBlocks}}
+\index{getGhostBlocks@{getGhostBlocks}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getGhostBlocks()}{getGhostBlocks()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t $\ast$$\ast$ \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Ghost\+Blocks}
+
+
+
+Definition at line 488 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a694db955b51445377e35d3df5485ea0e}\label{classlibtris_a694db955b51445377e35d3df5485ea0e}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getHoldBlock@{getHoldBlock}}
+\index{getHoldBlock@{getHoldBlock}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getHoldBlock()}{getHoldBlock()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+\mbox{\hyperlink{structblock__info}{block\+\_\+info}}$<$ colour\+\_\+t $>$ $\ast$ \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Hold\+Block}
+
+
+
+Definition at line 620 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a72dbab9e90f3165d9d150507cbb4ffa8}\label{classlibtris_a72dbab9e90f3165d9d150507cbb4ffa8}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getHoldLock@{getHoldLock}}
+\index{getHoldLock@{getHoldLock}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getHoldLock()}{getHoldLock()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Hold\+Lock}
+
+
+
+Definition at line 658 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a763182347e360c1135d7af63ff2d67cd}\label{classlibtris_a763182347e360c1135d7af63ff2d67cd}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Level}
+
+
+
+Definition at line 1418 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_aa318f86b9013df2b31c076b35bbaf835}\label{classlibtris_aa318f86b9013df2b31c076b35bbaf835}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getLineGoal@{getLineGoal}}
+\index{getLineGoal@{getLineGoal}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getLineGoal()}{getLineGoal()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Line\+Goal}
+
+
+
+Definition at line 1424 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a3746281f9f329384ce0b245166c8fc2c}\label{classlibtris_a3746281f9f329384ce0b245166c8fc2c}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getLinesCleared@{getLinesCleared}}
+\index{getLinesCleared@{getLinesCleared}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getLinesCleared()}{getLinesCleared()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Lines\+Cleared}
+
+
+
+Definition at line 1436 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_abf2953b0a94236d8f7d27eb67170d2b5}\label{classlibtris_abf2953b0a94236d8f7d27eb67170d2b5}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getLinesLeft@{getLinesLeft}}
+\index{getLinesLeft@{getLinesLeft}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getLinesLeft()}{getLinesLeft()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Lines\+Left}
+
+
+
+Definition at line 1430 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a9f74df626ef56212b8ed514800a78d63}\label{classlibtris_a9f74df626ef56212b8ed514800a78d63}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getMatrix@{getMatrix}}
+\index{getMatrix@{getMatrix}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getMatrix()}{getMatrix()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+\mbox{\hyperlink{structblock__info}{block\+\_\+info}}$<$ colour\+\_\+t $>$ $\ast$$\ast$ \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Matrix}
+
+
+
+Definition at line 482 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a057c040a404932d49814494fcf8c843f}\label{classlibtris_a057c040a404932d49814494fcf8c843f}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getMatrixHeight@{getMatrixHeight}}
+\index{getMatrixHeight@{getMatrixHeight}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getMatrixHeight()}{getMatrixHeight()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Matrix\+Height}
+
+
+
+Definition at line 464 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_ad0e358e0a8c67cac21f285bf502794e2}\label{classlibtris_ad0e358e0a8c67cac21f285bf502794e2}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getMatrixWidth@{getMatrixWidth}}
+\index{getMatrixWidth@{getMatrixWidth}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getMatrixWidth()}{getMatrixWidth()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Matrix\+Width}
+
+
+
+Definition at line 458 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a847ba3dc9323a2769f05c185c05863bd}\label{classlibtris_a847ba3dc9323a2769f05c185c05863bd}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getNextBlocks@{getNextBlocks}}
+\index{getNextBlocks@{getNextBlocks}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getNextBlocks()}{getNextBlocks()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+\mbox{\hyperlink{structblock__info}{block\+\_\+info}}$<$ colour\+\_\+t $>$ $\ast$$\ast$ \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Next\+Blocks (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{next\+\_\+blocks }\end{DoxyParamCaption})}
+
+
+
+Definition at line 547 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_ae771138d8fd9d84c88c4b917058b051d}\label{classlibtris_ae771138d8fd9d84c88c4b917058b051d}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getScore@{getScore}}
+\index{getScore@{getScore}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getScore()}{getScore()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Score}
+
+
+
+Definition at line 1412 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_aefd30b54af918e1209f52ff6e85260b1}\label{classlibtris_aefd30b54af918e1209f52ff6e85260b1}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getTetriminoColours@{getTetriminoColours}}
+\index{getTetriminoColours@{getTetriminoColours}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getTetriminoColours()}{getTetriminoColours()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+colour\+\_\+t $\ast$ \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Tetrimino\+Colours}
+
+
+
+Definition at line 476 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a96a53e555586b1d23c29c23f093d1c94}\label{classlibtris_a96a53e555586b1d23c29c23f093d1c94}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!getVisibleMatrixHeight@{getVisibleMatrixHeight}}
+\index{getVisibleMatrixHeight@{getVisibleMatrixHeight}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{getVisibleMatrixHeight()}{getVisibleMatrixHeight()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint16\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::get\+Visible\+Matrix\+Height}
+
+
+
+Definition at line 470 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a308176ebfc32457ffd6099e4ea0b2341}\label{classlibtris_a308176ebfc32457ffd6099e4ea0b2341}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!hardDrop@{hardDrop}}
+\index{hardDrop@{hardDrop}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{hardDrop()}{hardDrop()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::hard\+Drop (\begin{DoxyParamCaption}\item[{bool}]{lock = {\ttfamily true} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1143 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a16f737ecf8c76a70c5e2a259de61b9c2}\label{classlibtris_a16f737ecf8c76a70c5e2a259de61b9c2}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!hold@{hold}}
+\index{hold@{hold}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{hold()}{hold()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::hold}
+
+
+
+Definition at line 590 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_addd03e40cde45f7a5018fb43ae4d29b3}\label{classlibtris_addd03e40cde45f7a5018fb43ae4d29b3}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!isGameActive@{isGameActive}}
+\index{isGameActive@{isGameActive}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{isGameActive()}{isGameActive()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+bool \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::is\+Game\+Active}
+
+
+
+Definition at line 740 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a4e4be1938b0bd00b608196498540347c}\label{classlibtris_a4e4be1938b0bd00b608196498540347c}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!moveDown@{moveDown}}
+\index{moveDown@{moveDown}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{moveDown()}{moveDown()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::move\+Down}
+
+
+
+Definition at line 1094 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a4b2df761136c808130b21a61479e38a6}\label{classlibtris_a4b2df761136c808130b21a61479e38a6}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!moveLeft@{moveLeft}}
+\index{moveLeft@{moveLeft}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{moveLeft()}{moveLeft()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::move\+Left}
+
+
+
+Definition at line 1000 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a9290a59ad0e0463977435b8e5312e8e6}\label{classlibtris_a9290a59ad0e0463977435b8e5312e8e6}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!moveRight@{moveRight}}
+\index{moveRight@{moveRight}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{moveRight()}{moveRight()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::move\+Right}
+
+
+
+Definition at line 1047 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_aab3d99590fdece1397592dcf819c7b2f}\label{classlibtris_aab3d99590fdece1397592dcf819c7b2f}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!resetGhostBlocks@{resetGhostBlocks}}
+\index{resetGhostBlocks@{resetGhostBlocks}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{resetGhostBlocks()}{resetGhostBlocks()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::reset\+Ghost\+Blocks}
+
+
+
+Definition at line 534 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_afa4eeb72972607066773e9f973241be1}\label{classlibtris_afa4eeb72972607066773e9f973241be1}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!rotateAnticlockwise@{rotateAnticlockwise}}
+\index{rotateAnticlockwise@{rotateAnticlockwise}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{rotateAnticlockwise()}{rotateAnticlockwise()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::rotate\+Anticlockwise}
+
+
+
+Definition at line 1199 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_ad1fa8602cf69a416100086697044e819}\label{classlibtris_ad1fa8602cf69a416100086697044e819}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!rotateClockwise@{rotateClockwise}}
+\index{rotateClockwise@{rotateClockwise}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{rotateClockwise()}{rotateClockwise()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::rotate\+Clockwise}
+
+
+
+Definition at line 1193 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a22ebbc01b2333871d0d1a3abeb75b23f}\label{classlibtris_a22ebbc01b2333871d0d1a3abeb75b23f}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setARE@{setARE}}
+\index{setARE@{setARE}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setARE()}{setARE()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+A\+RE (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{are }\end{DoxyParamCaption})}
+
+
+
+Definition at line 908 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a0edebbbf2f0cf3b78a74287c130cd8c9}\label{classlibtris_a0edebbbf2f0cf3b78a74287c130cd8c9}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setARR@{setARR}}
+\index{setARR@{setARR}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setARR()}{setARR()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+A\+RR (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{arr }\end{DoxyParamCaption})}
+
+
+
+Definition at line 902 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a588d5e06c7ff17e5cc60baa7b4cc5172}\label{classlibtris_a588d5e06c7ff17e5cc60baa7b4cc5172}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setConstantGravity@{setConstantGravity}}
+\index{setConstantGravity@{setConstantGravity}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setConstantGravity()}{setConstantGravity()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+Constant\+Gravity (\begin{DoxyParamCaption}\item[{bool}]{constant\+\_\+gravity }\end{DoxyParamCaption})}
+
+
+
+Definition at line 932 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a0a389c0ae95ee39f4aa7a66b79d7b841}\label{classlibtris_a0a389c0ae95ee39f4aa7a66b79d7b841}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setDAS@{setDAS}}
+\index{setDAS@{setDAS}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setDAS()}{setDAS()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+D\+AS (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{das }\end{DoxyParamCaption})}
+
+
+
+Definition at line 896 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a86fa1ba9750d2b47d33c1fac977bbaea}\label{classlibtris_a86fa1ba9750d2b47d33c1fac977bbaea}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+Level (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{level }\end{DoxyParamCaption})}
+
+
+
+Definition at line 1406 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a4599d8089efe9207b6c0d3eba4abfd95}\label{classlibtris_a4599d8089efe9207b6c0d3eba4abfd95}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setLockDownType@{setLockDownType}}
+\index{setLockDownType@{setLockDownType}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setLockDownType()}{setLockDownType()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+Lock\+Down\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{libtris_8h_a119d755cffd8c576b2965cb9f65a1ff0}{Lock\+Down\+Type}}}]{lock\+\_\+down\+\_\+type }\end{DoxyParamCaption})}
+
+
+
+Definition at line 926 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a07349f8ec707a15e7c9df6aaf27c600b}\label{classlibtris_a07349f8ec707a15e7c9df6aaf27c600b}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setMovingDown@{setMovingDown}}
+\index{setMovingDown@{setMovingDown}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setMovingDown()}{setMovingDown()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+Moving\+Down (\begin{DoxyParamCaption}\item[{bool}]{moving }\end{DoxyParamCaption})}
+
+
+
+Definition at line 986 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a9bdc49b0ab4d150790e6ec9ced1fa36a}\label{classlibtris_a9bdc49b0ab4d150790e6ec9ced1fa36a}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setMovingLeft@{setMovingLeft}}
+\index{setMovingLeft@{setMovingLeft}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setMovingLeft()}{setMovingLeft()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+Moving\+Left (\begin{DoxyParamCaption}\item[{bool}]{moving }\end{DoxyParamCaption})}
+
+
+
+Definition at line 956 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_af12ac28a153079bede76eeffa8f990f2}\label{classlibtris_af12ac28a153079bede76eeffa8f990f2}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!setMovingRight@{setMovingRight}}
+\index{setMovingRight@{setMovingRight}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{setMovingRight()}{setMovingRight()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::set\+Moving\+Right (\begin{DoxyParamCaption}\item[{bool}]{moving }\end{DoxyParamCaption})}
+
+
+
+Definition at line 971 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a5f7c9756ceeaafe09876663f69227303}\label{classlibtris_a5f7c9756ceeaafe09876663f69227303}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!startGame@{startGame}}
+\index{startGame@{startGame}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{startGame()}{startGame()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::start\+Game}
+
+
+
+Definition at line 762 of file libtris.\+h.
+
+\mbox{\Hypertarget{classlibtris_a86b3988c7b801c67c8478ae729e45433}\label{classlibtris_a86b3988c7b801c67c8478ae729e45433}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!update@{update}}
+\index{update@{update}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+void \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::update (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{dt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 784 of file libtris.\+h.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classlibtris_a86bdb865c4c82560a6d0b7ecb27fb2ab}\label{classlibtris_a86bdb865c4c82560a6d0b7ecb27fb2ab}} 
+\index{libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}!lock\_down\_moves@{lock\_down\_moves}}
+\index{lock\_down\_moves@{lock\_down\_moves}!libtris$<$ colour\_t $>$@{libtris$<$ colour\_t $>$}}
+\doxysubsubsection{\texorpdfstring{lock\_down\_moves}{lock\_down\_moves}}
+{\footnotesize\ttfamily template$<$class colour\+\_\+t $>$ \\
+uint8\+\_\+t \mbox{\hyperlink{classlibtris}{libtris}}$<$ colour\+\_\+t $>$\+::lock\+\_\+down\+\_\+moves = 0}
+
+
+
+Definition at line 242 of file libtris.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{libtris_8h}{libtris.\+h}}\end{DoxyCompactItemize}
