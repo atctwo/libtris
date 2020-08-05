@@ -882,9 +882,15 @@ void libtris<colour_t>::resetGhostBlocks()
     for (uint8_t i = 0; i < 4; i++)
     {
         block_info<colour_t> *info = &this->matrix[this->ghost_position[i][0]][this->ghost_position[i][1]];
-        if (info->block_type == BLOCK_GHOST) 
+        if ( (this->ghost_position[i][0] < this->matrix_width) && (this->ghost_position[i][1] < this->matrix_height) )
         {
-            *info = (block_info<colour_t>){NULL, BLOCK_EMPTY, 0, false, BLOCK_EMPTY, BLOCK_EMPTY, ROTATION_SPAWN};
+            if (info)
+            {
+                if (info->block_type == BLOCK_GHOST) 
+                {
+                    *info = (block_info<colour_t>){NULL, BLOCK_EMPTY, 0, false, BLOCK_EMPTY, ROTATION_SPAWN};
+                }
+            }
         }
     }
 }
@@ -1121,6 +1127,13 @@ void libtris<colour_t>::startGame()
 
     // place tetrimino
     this->spawnNewTetrimino();
+
+    // reset stats
+    this->score = 0;
+    this->level = 1;
+    this->combo = 0;
+    this->lines_cleared = 0;
+    this->line_goal = this->level * 5;
 
     // set game active flag
     this->game_active = true;
