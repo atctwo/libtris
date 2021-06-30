@@ -224,6 +224,7 @@ private:
     uint16_t matrix_height;                         /**< the height of the matrix */
     block_info<colour_t> **matrix;                  /**< the matrix itself */
     block_info<colour_t> **rotation_matrix;         /**< a small virtual matrix used to handle tetrimino rotation */
+    block_info<colour_t> **next_blocks_display;     /**< used to return the next blocks that will be spawned */
     colour_t *tetrimino_colours;                    /**< the colours of each tetrimino and the ghost tetriminoes */
     uint16_t current_tetrimino_positions[4][2];     /**< the positions of each of the blocks that make up the current tetrimino */
     uint16_t current_tetrimino_origin[2];           /**< the position of the origin block */
@@ -645,6 +646,13 @@ libtris<colour_t>::libtris(uint16_t matrix_width, uint16_t matrix_height, uint16
         this->rotation_matrix[i] = (block_info<colour_t>*) malloc(5 * sizeof(block_info<colour_t>));
     }
 
+    // allocate memory for next block return store
+    this->next_blocks_display = (block_info<colour_t>**) malloc(6 * sizeof(block_info<colour_t>*));
+    for (uint16_t i = 0; i < 6; i++)
+    {
+        this->next_blocks_display[i] = (block_info<colour_t>*) malloc(8 * sizeof(block_info<colour_t>));
+    }
+
     // allocate memory for ghost position
     this->ghost_position = (uint16_t**) malloc(4 * sizeof(uint16_t*));  // allocate space for an array of pointers (to rows)
     for (uint16_t i = 0; i < 4; i++)
@@ -901,14 +909,12 @@ block_info<colour_t> **libtris<colour_t>::getNextBlocks(uint8_t next_blocks)
     uint8_t internal_next_blocks = next_blocks;
     if (next_blocks > 6) internal_next_blocks = 6;
     uint8_t current_block = this->next_pointer + 1;
-    block_info<colour_t> **blocks = (block_info<colour_t>**) malloc(internal_next_blocks * sizeof(block_info<colour_t>*));
     // printf("getting next %d blocks\n", internal_next_blocks);
 
     for (uint8_t i = 0; i < internal_next_blocks; i++)
     {
         if (current_block > 13) current_block = 0;
         // printf("next piece %d\n", i);
-        blocks[i] = (block_info<colour_t>*) malloc(8 * sizeof(block_info<colour_t>));
         for (uint8_t y = 0; y < 2; y++)
         {
             for (uint8_t x = 0; x < 4; x++)
@@ -917,14 +923,14 @@ block_info<colour_t> **libtris<colour_t>::getNextBlocks(uint8_t next_blocks)
                 // printf("current block: %d\n", current_block);
                 if (standard_tetriminoes[this->tetrimino_bag[current_block]][y][x])
                 {
-                    blocks[i][pos] = (block_info<colour_t>) {
+                    next_blocks_display[i][pos] = (block_info<colour_t>) {
                         this->tetrimino_colours[this->tetrimino_bag[current_block]],
                         BLOCK_CURRENT, this->tetrimino_bag[current_block], false, BLOCK_EMPTY, ROTATION_SPAWN
                     };
                 }
                 else 
                 {
-                    blocks[i][pos] = (block_info<colour_t>) {
+                    next_blocks_display[i][pos] = (block_info<colour_t>) {
                         NULL, BLOCK_EMPTY, this->tetrimino_bag[current_block], false, BLOCK_EMPTY, ROTATION_SPAWN
                     };
                 }
@@ -934,7 +940,7 @@ block_info<colour_t> **libtris<colour_t>::getNextBlocks(uint8_t next_blocks)
         current_block++;
     }
 
-    return blocks;
+    return next_blocks_display;
 }
 
 

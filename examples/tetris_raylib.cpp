@@ -224,7 +224,6 @@ int main(void)
                     DrawRectangleLinesEx(outline, 1, BLACK);
                 }
             }
-            free(next_blocks);
 
         EndDrawing();
 
